@@ -1,29 +1,46 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <div class="in">
+      <div class="logo"><img src="./assets/logo.png" alt="四月設計" /></div>
+      <div class="menu">
+        <router-link to="/">回首頁</router-link>
+        <router-link to="/about">關於四月設計</router-link>
+        <router-link to="/">聯絡我們</router-link>
+      </div>
+    </div>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
 #nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  box-shadow: 0 5px 5px #ccc;
+  padding: 10px 0;
+  .in {
+      @extend %center;
+    display: flex;
+    height: 80px;
+    align-items: stretch;
+  }
+  .logo {
+    flex: 30%;
+    text-align: left;
+    img {
+      height: 100%;
+    }
+  }
+  .menu {
+    flex: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: #343434;
+        +a{
+            margin-left: 20px;
+        }
     }
   }
 }

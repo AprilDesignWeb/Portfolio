@@ -1,0 +1,16 @@
+$aaa:rgb(22, 233, 33);
+$pc-layput:1500px;
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+%center {
+    max-width: $pc-layput;
+    margin: 0 auto;
+}
